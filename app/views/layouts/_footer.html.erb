@@ -50,12 +50,14 @@
     <div class="widget">
       <h3 class="title"><span>Latest Tweets</span></h3>
       <div class="magz-twitter-tweet">
-        <a href="http://twitter.com/envato"><img class="twit-pic" src="images/envato.png" alt=""></a>
+        <a href="http://twitter.com/envato">
+          <%= image_tag "envato.png", :class=>"twit-pic", :alt=>"" %></a>
         <div class="twit-entry">&quot;RT <a href="http://twitter.com/SayersM">@SayersM</a> "Envato is here <a href="http://twitter.com/#!/search?q=%23YOW13">#YOW13</a>! http://t.co/FqARi13BlN" <a href="http://twitter.com/#!/search?q=%23lanyardlife">#lanyardlife</a>&quot;<div class="magz-twitter-tweet-time" id="magz-twitter-tweet-time-1">4 hours ago</div></div>
         <div class="clearfix"></div>
       </div>
       <div class="magz-twitter-tweet">
-        <a href="http://twitter.com/envato"><img class="twit-pic" src="images/envato.png" alt=""></a><div class="twit-entry">&quot;RT <a href="http://twitter.com/MicrolancerBeta">@MicrolancerBeta</a>: Want a cool t-shirt? Of course you do! We're giving away Microlancer t-shirts while stocks last. Learn more: http://t.…&quot;<div class="magz-twitter-tweet-time" id="magz-twitter-tweet-time-2">4 hours ago</div></div>
+          <% link_to image_tag("envato.png", :class=>"twit-pic", :alt=>""), root_path %>
+        <div class="twit-entry">&quot;RT <a href="http://twitter.com/MicrolancerBeta">@MicrolancerBeta</a>: Want a cool t-shirt? Of course you do! We're giving away Microlancer t-shirts while stocks last. Learn more: http://t.…&quot;<div class="magz-twitter-tweet-time" id="magz-twitter-tweet-time-2">4 hours ago</div></div>
         <div class="clearfix"></div>
       </div>
 
@@ -86,17 +88,18 @@
       <div class="socmed clearfix">		
         <ul>
           <li>
-          <a href="#"><img src="images/rss-icon.png" alt=""></a>
+          
+          <%= link_to image_tag("rss-icon.png", :alt=>""), root_path %>
           <h4>RSS</h4>
           <p>Subscribe</p>
           </li>
           <li>
-          <a href="#"><img src="images/twitter-icon.png" alt=""></a>
+          <%= link_to image_tag("twitter-icon.png", :alt=>""), root_path %>
           <h4>37005</h4>
           <p>Followers</p>
           </li>
           <li>
-          <a href="#"><img src="images/fb-icon.png" alt=""></a>
+          <%= link_to image_tag("fa-icon.png", :alt=>""), root_path %>
           <h4>109</h4>
           <p>Fans</p>
           </li>
@@ -106,7 +109,7 @@
   </div>
 
   <div class="footer-widget span6 block5">
-    <img class="footer-logo" src="images/footer-logo.png" alt="Magazine">
+    <%= image_tag "footer-logo.png", :class=>"footer-logo", :alt=>"Magazine" %>
     <div class="footer-text">
       <h4>About Magazine</h4>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius mod tempor incididu... </p>
