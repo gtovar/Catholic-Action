@@ -1,0 +1,85 @@
+<header id="header" class="container">
+<div id="mast-head">
+  <div id="logo">
+    <%= link_to image_tag("logo.png", alt: "Accion Catolica"), root_path, title: "Accion Catolica" %>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-inverse clearfix nobot">
+
+<a id="responsive-menu-button" href="#swipe-menu">
+  <span class="icon-bar"></span>
+  <span class="icon-bar"></span>
+  <span class="icon-bar"></span>		
+</a>	
+
+<!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+<div class="nav-collapse" id="swipe-menu-responsive">
+
+  <ul class="nav">
+
+    <li>
+    <span id="close-menu">
+      <a href="#" class="close-this-menu">Close</a>
+      <script type="text/javascript">
+        jQuery('a.sidr-class-close-this-menu').click(function(){
+            jQuery('div.sidr').css({
+              'right': '-476px'
+              });
+            jQuery('body').css({
+              'right': '0'
+              });							
+            });
+          </script>
+
+        </span>
+        </li>
+
+        <li><%= link_to image_tag("home.png", alt: "Accion Catolica"), root_path, title: "Accion Catolica" %></li>
+        <li class="dropdown"><a href="index.html">Home</a>
+        <ul class="sub-menu">
+          <li><a href="magazine2.html">Homepage 2</a></li>
+          <li><a href="blog.html">Homepage 3</a></li>
+        </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li class="dropdown"><a href="##">Page Templates</a>
+        <ul class="sub-menu">
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html">Default</a></li>
+          <li><a href="404.html">Error 404</a></li>
+          <li><a href="fullwidth.html">Full Width</a></li>
+          <li><a href="gallery-2col.html">Galleries &#8211; 2 Columns</a></li>
+          <li><a href="gallery-3col.html">Galleries &#8211; 3 Columns</a></li>
+          <li><a href="gallery-4col.html">Galleries &#8211; 4 Columns</a></li>
+          <li><a href="index.html">Magazine 1</a></li>
+          <li><a href="magazine2.html">Magazine 2</a></li>
+        </ul>
+        </li>
+        <li class="dropdown"><a href="blog.html">Blog</a>
+        <ul class="sub-menu">
+          <li><a href="fashion-news.html">Fashion News</a></li>
+          <li><a href="#">Game News</a></li>
+          <li><a href="#">Sport News</a></li>
+          <li class="dropdown"><a href="#">Technology</a>
+          <ul class="sub-menu">
+            <li><a href="fashion-news.html">Fashion News</a></li>
+            <li><a href="#">Game News</a></li>
+            <li><a href="#">Sport News</a></li>
+            <li><a href="#">Technology</a></li>
+          </ul>
+          </li>
+        </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="single-post.html">Single Post</a></li>
+        <li><a href="documentation/">Documentation</a></li>
+      </ul>
+
+    </div><!--/.nav-collapse -->
+
+    </nav><!-- /.navbar -->
+
+    </header><!-- #masthead -->
