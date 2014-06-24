@@ -1,19 +1,16 @@
-<p id="notice"><%= notice %></p>
+<article class="page">
+<%= render 'shared/breadcrumb', pages: @page %>
+<header class="entry-header">
+<h1 class="entry-title"><span><%= @page.name %></span></h1>
+</header>
+<%= link_to 'Edit', edit_page_path(@page), class: "btn btn-primary btn-lg",  role: "button" %> |
+<%= link_to 'Back', pages_path, class: "btn btn-primary btn-lg" %>
+<div class="entry-content">
+<%= raw @page.content %>
+</div>
+<%= link_to 'Edit', edit_page_path(@page), class: "btn btn-primary btn-lg",  role: "button" %> |
+<%= link_to 'Back', pages_path, class: "btn btn-primary btn-lg" %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @page.name %>
-</p>
+<%= render 'shared/breadcrumb', pages: @page %>
+</article>
 
-<p>
-  <strong>Content:</strong>
-  <%= @page.content %>
-</p>
-
-<p>
-  <strong>Ancestry:</strong>
-  <%= @page.ancestry %>
-</p>
-
-<%= link_to 'Edit', edit_page_path(@page) %> |
-<%= link_to 'Back', pages_path %>
