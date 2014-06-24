@@ -4,7 +4,7 @@ a#responsive-menu-button {
   margin-right:5px;
   margin-left:5px;
   margin-top:10px !important;
-  box-shadow:0 1px 0 rgba(255,255,255,0.1) inset,0px 1px 0 rgba(255,255,255,0.075);
+  /* box-shadow:0 1px 0 rgba(255,255,255,0.1) inset,0px 1px 0 rgba(255,255,255,0.075); */
   line-height:20px;
   text-align:center;
   vertical-align:middle;
@@ -12,10 +12,10 @@ a#responsive-menu-button {
   border-radius:4px;
   color:rgb(255,255,255);
   text-shadow:0 -1px 0 rgba(0,0,0,0.25);
-  background-color:rgb(14,14,14);
-  background-image:linear-gradient(to bottom,rgb(21,21,21),rgb(4,4,4));
-  background-repeat:repeat-x;
-  border-color:rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+  background-color:#325C80;
+  /* background-image:linear-gradient(to bottom,rgb(21,21,21),rgb(4,4,4)); */
+  /* background-repeat:repeat-x; */
+  /* border-color:rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25); */
 }
 
 a#responsive-menu-button .icon-bar {
@@ -76,7 +76,7 @@ a.sidr-class-close-this-menu{
   overflow-x:auto;
   overflow-y:auto;
   font-size:15px;
-  background:#3d4c54;
+  background:#4682b4;
   color:#fff;
 }
 
@@ -146,16 +146,16 @@ a.sidr-class-close-this-menu{
   display:block;
   margin:0 0 15px;
   padding:0;
-  border-top:1px solid #57656c;
-  border-bottom:1px solid #57656c;
+  border-top:1px solid #7193C6;
+  border-bottom:1px solid #7193C6;
 }
 
 .sidr ul li {
   display:block;
   margin:0;
   line-height:48px;
-  border-top:1px solid #57656c;
-  border-bottom:1px solid #57656c;
+  border-top:1px solid #7193C6;
+  border-bottom:1px solid #7193C6;
 }
 
 .sidr ul li:hover,
@@ -171,7 +171,7 @@ a.sidr-class-close-this-menu{
 .sidr ul li.active>span,
 .sidr ul li.sidr-class-active>a,
 .sidr ul li.sidr-class-active>span {
-  background:#293339;
+  background:#325C80;
 }
 
 .sidr ul li a,
