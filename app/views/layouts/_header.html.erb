@@ -35,56 +35,26 @@
           </script>
 
         </span>
+
         </li>
 
         <li><%= link_to image_tag("home.png", alt: "Accion Catolica"), root_path, title: "Accion Catolica" %></li>
 
-        <li class="dropdown"><a href="index.html">Quiénes somos</a>
-        <ul class="sub-menu">
-          <li><a href="magazine2.html">Homepage 2</a></li>
-          <li><a href="blog.html">Homepage 3</a></li>
-        </ul>
-        </li>
+        <% Page.roots.each do |page| %>
+          <li class="dropdown"><%= link_to page.name , "#" %>
 
-
-        <li><a href="about.html">Qué te ofrecemos</a></li>
-
-        <li class="dropdown"><a href="##">Inserción en la pastoral </a>
-        <ul class="sub-menu">
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="index.html">Default</a></li>
-          <li><a href="404.html">Error 404</a></li>
-          <li><a href="fullwidth.html">Full Width</a></li>
-          <li><a href="gallery-2col.html">Galleries &#8211; 2 Columns</a></li>
-          <li><a href="gallery-3col.html">Galleries &#8211; 3 Columns</a></li>
-          <li><a href="gallery-4col.html">Galleries &#8211; 4 Columns</a></li>
-          <li><a href="index.html">Magazine 1</a></li>
-          <li><a href="magazine2.html">Magazine 2</a></li>
-        </ul>
-        </li>
-
-        <li class="dropdown"><a href="blog.html">Escuela de santidad</a>
-        <ul class="sub-menu">
-          <li><a href="fashion-news.html">Fashion News</a></li>
-          <li><a href="#">Game News</a></li>
-          <li><a href="#">Sport News</a></li>
-          <li class="dropdown"><a href="#">Technology</a>
+        <% if page.children.present? %>
           <ul class="sub-menu">
-            <li><a href="fashion-news.html">Fashion News</a></li>
-            <li><a href="#">Game News</a></li>
-            <li><a href="#">Sport News</a></li>
-            <li><a href="#">Technology</a></li>
+            <% page.children.each do |children| %>
+              <li><%= link_to children.name, children %></li>
+            <% end%>
           </ul>
-          </li>
-        </ul>
+        <% end %>
+
         </li>
+      <% end %>
 
-
-        <li><a href="contact.html">Nuestros Pastores</a></li>
-        <li><a href="single-post.html">Nuestros dirigentes</a></li>
-        <li><a href="documentation/">Identidad laical</a></li>
-      </ul>
+    </ul>
 
     </div><!--/.nav-collapse -->
 

@@ -13,7 +13,11 @@
       <%= render 'layouts/header' %>
       <%= render 'layouts/headline' %>
       <%= render 'layouts/intr' %>
-      <%= yield %>
+      <div id="content" class="container">
+        <div id="main" class="row-fluid">
+          <%= yield %>
+        </div>
+      </div>
       <%= render 'layouts/footer' %>
     </div>
   </body>
