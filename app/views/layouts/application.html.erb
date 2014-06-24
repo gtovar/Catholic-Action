@@ -15,7 +15,17 @@
       <%= render 'layouts/intr' %>
       <div id="content" class="container">
         <div id="main" class="row-fluid">
+          <div id="main-left" class="span8">
+          <% if notice %>
+            <p class="alert alert-success"><%= notice %></p>
+          <% end %>
+          <% if alert %>
+            <p class="alert alert-danger"><%= alert %></p>
+          <% end %>
           <%= yield %>
+          </div>
+          <%= render 'layouts/sidebar' %>
+          <%= render 'static_pages/gallery' %>
         </div>
       </div>
       <%= render 'layouts/footer' %>
