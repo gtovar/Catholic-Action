@@ -32,7 +32,7 @@
               'right': '0'
               });							
             });
-          </script>
+</script>
 
         </span>
 
@@ -40,7 +40,7 @@
 
         <li><%= link_to image_tag("home.png", alt: "Accion Catolica"), root_path, title: "Accion Catolica" %></li>
 
-        <% Page.roots.each do |page| %>
+        <% Page.order(:created_at).roots.each do |page| %>
           <li class="dropdown"><%= link_to page.name , "#" %>
 
         <% if page.children.present? %>
@@ -56,8 +56,8 @@
 
     </ul>
 
-    </div><!--/.nav-collapse -->
+  </div><!--/.nav-collapse -->
 
-    </nav><!-- /.navbar -->
+  </nav><!-- /.navbar -->
 
-    </header><!-- #masthead -->
+  </header><!-- #masthead -->
