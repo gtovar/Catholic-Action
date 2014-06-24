@@ -1,0 +1,8 @@
+<ol class="breadcrumb">
+  <% pages.root.children.each do |page| %>
+    <% unless pages == page %>
+      <li><%= link_to page.name, page %> | </li>
+    <% end %>
+  <% end %>
+  <li>Sitios relacionados</li>
+</ol>
