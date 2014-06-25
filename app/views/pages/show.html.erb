@@ -3,14 +3,20 @@
 <header class="entry-header">
 <h1 class="entry-title"><span><%= @page.name %></span></h1>
 </header>
-<%= link_to 'Edit', edit_page_path(@page), class: "btn btn-primary btn-lg",  role: "button" %> |
-<%= link_to 'Back', pages_path, class: "btn btn-primary btn-lg" %>
+
+<% if user_signed_in? %>
+  <%= link_to 'Edit', edit_page_path(@page), class: "btn btn-primary btn-lg",  role: "button" %> |
+  <%= link_to 'Back', pages_path, class: "btn btn-primary btn-lg" %>
+<% end %>
+
 <div class="entry-content">
   <%= markdown(@page.content) %>
 </div>
-<%= link_to 'Edit', edit_page_path(@page), class: "btn btn-primary btn-lg",  role: "button" %> |
-<%= link_to 'Back', pages_path, class: "btn btn-primary btn-lg" %>
 
+<% if user_signed_in? %>
+  <%= link_to 'Edit', edit_page_path(@page), class: "btn btn-primary btn-lg",  role: "button" %> |
+  <%= link_to 'Back', pages_path, class: "btn btn-primary btn-lg" %>
+<%end%>
 <%= render 'shared/breadcrumb', pages: @page %>
 </article>
 

@@ -3,12 +3,14 @@
     <div class="page-header">
       <h1>Editing page</h1>
     </div>
+    <% if user_signed_in? %>
     <div class="span10">
       <%= render 'form' %>
-    <div class="span10">
-      <%= link_to 'Mostrar', @page %> |
-      <%= link_to 'Regresar', pages_path %>
+      <div class="span10">
+        <%= link_to 'Mostrar', @page %> |
+        <%= link_to 'Regresar', pages_path %>
+      </div>
     </div>
-    </div>
+  <% end %>
   </div>
 </div>
