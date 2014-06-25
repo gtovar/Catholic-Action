@@ -46,3 +46,4 @@ end
 
 gem 'xray-rails', group: :development
 gem 'ancestry'
+gem 'redcarpet'

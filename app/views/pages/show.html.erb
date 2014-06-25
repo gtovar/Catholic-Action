@@ -6,7 +6,7 @@
 <%= link_to 'Edit', edit_page_path(@page), class: "btn btn-primary btn-lg",  role: "button" %> |
 <%= link_to 'Back', pages_path, class: "btn btn-primary btn-lg" %>
 <div class="entry-content">
-<%= raw @page.content %>
+  <%= markdown(@page.content) %>
 </div>
 <%= link_to 'Edit', edit_page_path(@page), class: "btn btn-primary btn-lg",  role: "button" %> |
 <%= link_to 'Back', pages_path, class: "btn btn-primary btn-lg" %>
