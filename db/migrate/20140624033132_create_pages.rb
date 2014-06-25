@@ -4,9 +4,11 @@ class CreatePages < ActiveRecord::Migration
       t.string :name
       t.text :content
       t.string :ancestry
+      t.string :slug
 
       t.timestamps
     end
     add_index :pages, :ancestry
+    add_index :pages, :slug, unique: true 
   end
 end

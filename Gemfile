@@ -47,3 +47,4 @@ end
 gem 'xray-rails', group: :development
 gem 'ancestry'
 gem 'redcarpet'
+gem 'friendly_id', '~> 5.0.0'
