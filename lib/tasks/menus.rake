@@ -6,8 +6,8 @@ namespace :menus do
     puts "======== Iniciando \n"
     Rake::Task["db:drop:all"].invoke
     Rake::Task["db:create:all"].invoke
-    Rake::Task["db:setup"].invoke
     end
+    Rake::Task["db:setup"].invoke
 
     Rake::Task["menus:quienes_somos"].invoke
     Rake::Task["menus:que_te_ofrecemos"].invoke
