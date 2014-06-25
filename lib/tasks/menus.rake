@@ -2,10 +2,13 @@ namespace :menus do
   desc "Create navbar menu options and submenus with tree structure"
 
   task load: :environment do
+    unless Rails.env.production?
     puts "======== Iniciando \n"
     Rake::Task["db:drop:all"].invoke
     Rake::Task["db:create:all"].invoke
     Rake::Task["db:setup"].invoke
+    end
+
     Rake::Task["menus:quienes_somos"].invoke
     Rake::Task["menus:que_te_ofrecemos"].invoke
     Rake::Task["menus:insercion_en_la_pastoral"].invoke
