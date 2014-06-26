@@ -10,10 +10,18 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li class="active"><a href="#">Overview</a></li>
-            <li><a href="#">Reports</a></li>
-            <li><a href="#">Analytics</a></li>
-            <li><a href="#">Export</a></li>
+            <li class=<%= cp(notices_path) %> >
+            <%= link_to notices_path do %>
+              <span class="badge pull-right"><%= @notices.count %></span>
+              Noticias
+            <% end %>
+            </li>
+            <li class=<%= cp(pages_path) %> >
+            <%= link_to pages_path do %>
+              <span class="badge pull-right"><%= @pages.count %></span>
+              Paginas
+            <% end %>
+            </li>
           </ul>
         </div>
 

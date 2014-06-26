@@ -1,6 +1,10 @@
-<h1>Listing pages</h1>
+<h1 class="page-header">Paginas
+  <%= link_to 'Agregar Pagina', new_page_path, class: "btn btn-primary" %>
+</h1>
+<div class="row placeholders">
 
-<table>
+<div class="table-responsive">
+  <table class="table table-striped">
   <thead>
     <tr>
       <th>Name</th>
@@ -16,11 +20,11 @@
     <% @pages.each do |page| %>
       <tr>
         <td><%= page.name %></td>
-        <td><%= page.content %></td>
-        <td><%= page.ancestry %></td>
-        <td><%= link_to 'Show', page %></td>
-        <td><%= link_to 'Edit', edit_page_path(page) %></td>
-        <td><%= link_to 'Destroy', page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= markdown (truncate(page.content, length: 250).to_s) %></td>
+        <td style="width: 200px;"><%= page.is_root? ? "Padre" : page.root.name %></td>
+        <td><%= link_to 'Mostrar', page %></td>
+        <td><%= link_to 'Editar', edit_page_path(page) %></td>
+        <td><%= link_to 'Eliminar', page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Page', new_page_path %>
+<%= link_to 'Agregar Pagina', new_page_path, class: "btn btn-primary" %>

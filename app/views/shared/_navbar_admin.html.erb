@@ -14,12 +14,8 @@
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
-      <li class="active">
-      <%= link_to "Paginas", pages_path %>
-      </li>
-      <li>
-      <%= link_to "Noticias", pages_path %>
-      </li>
+      <%= content_tag(:li, link_to("Paginas", pages_path), class: cp(pages_path)) %>
+      <%= content_tag(:li, link_to("Noticias", notices_path), class: cp(notices_path)) %>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li>

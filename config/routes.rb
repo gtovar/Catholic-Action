@@ -1,5 +1,7 @@
 CatholicAction::Application.routes.draw do
 
+  resources :notices
+
   devise_for :users
   resources :pages
   root "static_pages#home"
